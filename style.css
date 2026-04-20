@@ -224,6 +224,16 @@ header {
   transform: translateY(-2px);
 }
 
+.btn-bas {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eef2ff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.btn-bas:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .form-result {
   margin-top: 1rem;
   padding: 1rem 1.2rem;
