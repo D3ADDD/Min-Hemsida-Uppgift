@@ -62,6 +62,15 @@ header {
   letter-spacing: .15em;
   text-transform: uppercase;
   color: #c8ddff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  mix-blend-mode: lighten;
 }
 
 .global-menu ul {
@@ -225,6 +234,57 @@ footer {
   padding: 2rem 1.5rem;
   text-align: center;
   color: rgba(236, 241, 255, 0.6);
+}
+
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  min-height: calc(100vh - 82px);
+}
+
+.page-card {
+  background: rgba(6, 10, 19, 0.94);
+  border: 1px solid rgba(77, 118, 255, 0.12);
+  border-radius: 24px;
+  padding: 2.5rem;
+}
+
+.page-card h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: #f3f8ff;
+}
+
+.page-card > p {
+  color: rgba(236, 241, 255, 0.8);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-item {
+  background: rgba(8, 13, 26, 0.7);
+  border: 1px solid rgba(77, 118, 255, 0.1);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.service-item h3 {
+  color: #82b3ff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.service-item p {
+  color: rgba(236, 241, 255, 0.8);
+  line-height: 1.6;
 }
 
 @media (max-width: 760px) {
