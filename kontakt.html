@@ -10,24 +10,40 @@
 
 <body>
     <header>
-        <nav class="global-menu">
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="tjanster.html">Tjänster</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="kontakt.html" class="active">Kontakt</a></li>
-                <li><a href="bli-medlem.html">Bli medlem</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <a href="index.html" class="brand">Hamodi PT</a>
+            <nav class="global-menu">
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="tjanster.html">Tjänster</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                    <li><a href="bli-medlem.html">Bli medlem</a></li>
+                </ul>
+            </nav>
+            <div class="menu-dropdown">
+                <button class="menu-toggle" aria-haspopup="true" aria-expanded="false">Alla sidor ▾</button>
+                <div class="dropdown-panel">
+                    <a href="index.html">Startsida</a>
+                    <a href="tjanster.html">Tjänster</a>
+                    <a href="program.html">Program</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="bli-medlem.html">Bli medlem</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Kontaktuppgifter</h1>
-        <ul>
-            <li>Postadress: Lärkgatan 2, 34233 Alvesta</li>
-            <li>Telefon: 072-929 25 49</li>
-            <li>E‑post: moal08010@utb.vaxjo.se</li>
-        </ul>
+    <main class="page-content">
+        <section class="page-card">
+            <h1>Kontaktuppgifter</h1>
+            <ul>
+                <li>Postadress: Lärkgatan 2, 34233 Alvesta</li>
+                <li>Telefon: 072-929 25 49</li>
+                <li>E-post: moal08010@utb.vaxjo.se</li>
+            </ul>
+            <a href="index.html" class="btn btn-secondary">Tillbaka till startsidan</a>
+        </section>
     </main>
 
     <footer>

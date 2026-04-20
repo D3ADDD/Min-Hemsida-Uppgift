@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ansök om medlemskap hos Hamodi PT." />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bli medlem</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="brand">Hamodi PT</a>
+            <nav class="global-menu">
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="tjanster.html">Tjänster</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="bli-medlem.html" class="active">Bli medlem</a></li>
+                </ul>
+            </nav>
+            <div class="menu-dropdown">
+                <button class="menu-toggle" aria-haspopup="true" aria-expanded="false">Alla sidor ▾</button>
+                <div class="dropdown-panel">
+                    <a href="index.html">Startsida</a>
+                    <a href="tjanster.html">Tjänster</a>
+                    <a href="program.html">Program</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="bli-medlem.html">Bli medlem</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="form-card">
+                <h2>Boka tjänst</h2>
+                <p>Fyll i formuläret nedan så återkommer vi med en personlig upplägg. Tack för din förfrågan!</p>
+                <form id="member-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="full-name">Fullständigt namn</label>
+                            <input type="text" id="full-name" name="fullName" placeholder="Exempel: Sara Svensson" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" name="email" placeholder="exempel@mail.se" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefonnummer</label>
+                            <input type="tel" id="phone" name="phone" placeholder="070-123 45 67" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Välj tjänst</label>
+                            <select id="service" name="service" required>
+                                <option value="">Välj tjänst</option>
+                                <option value="kostguide">Kostguide</option>
+                                <option value="traningsguide">Träningsguide</option>
+                                <option value="bada">Både kost- och träningsguide</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="grid-column: span 2;">
+                            <label for="message">Berätta lite om dig</label>
+                            <textarea id="message" name="message" placeholder="Vad vill du uppnå med din träning?" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Skicka ansökan</button>
+                    </div>
+                </form>
+                <div class="form-result" id="form-result" style="display:none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hamodi PT</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('member-form');
+        const result = document.getElementById('form-result');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const name = document.getElementById('full-name').value.trim();
+            result.style.display = 'block';
+            result.innerHTML = `<strong>Tack för din ansökan, ${name || 'du'}!</strong><br />Vi har tagit emot din information och kommer att titta på den inom kort.`;
+            form.reset();
+            form.querySelector('button[type="submit"]').disabled = true;
+            setTimeout(() => {
+                form.querySelector('button[type="submit"]').disabled = false;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

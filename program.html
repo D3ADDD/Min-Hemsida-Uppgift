@@ -10,22 +10,37 @@
 
 <body>
     <header>
-        <nav class="global-menu">
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="tjanster.html">Tjänster</a></li>
-                <li><a href="program.html" class="active">Program</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="bli-medlem.html">Bli medlem</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <a href="index.html" class="brand">Hamodi PT</a>
+            <nav class="global-menu">
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="tjanster.html">Tjänster</a></li>
+                    <li><a href="program.html" class="active">Program</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="bli-medlem.html">Bli medlem</a></li>
+                </ul>
+            </nav>
+            <div class="menu-dropdown">
+                <button class="menu-toggle" aria-haspopup="true" aria-expanded="false">Alla sidor ▾</button>
+                <div class="dropdown-panel">
+                    <a href="index.html">Startsida</a>
+                    <a href="tjanster.html">Tjänster</a>
+                    <a href="program.html">Program</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="bli-medlem.html">Bli medlem</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Träningsprogram</h1>
-        <p>Skräddarsydda träningsprogram designade just för dig.</p>
-        <p>Varje program är unikt anpassat efter dina mål, nuvarande fitnessnivå och preferenser. Vi använder vetenskapliga metoder för maximal effektivitet.</p>
-        <a href="bli-medlem.html" class="btn">Få ditt program</a>
+    <main class="page-content">
+        <section class="page-card">
+            <h1>Träningsprogram</h1>
+            <p>Skräddarsydda träningsprogram designade just för dig.</p>
+            <p>Varje program är unikt anpassat efter dina mål, nuvarande fitnessnivå och preferenser. Vi använder vetenskapliga metoder för maximal effektivitet.</p>
+            <a href="bli-medlem.html" class="btn btn-primary">Få ditt program</a>
+        </section>
     </main>
 
     <footer>

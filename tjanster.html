@@ -10,27 +10,42 @@
 
 <body>
     <header>
-        <nav class="global-menu">
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="tjanster.html" class="active">Tjänster</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="bli-medlem.html">Bli medlem</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <a href="index.html" class="brand">Hamodi PT</a>
+            <nav class="global-menu">
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="tjanster.html" class="active">Tjänster</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="bli-medlem.html">Bli medlem</a></li>
+                </ul>
+            </nav>
+            <div class="menu-dropdown">
+                <button class="menu-toggle" aria-haspopup="true" aria-expanded="false">Alla sidor ▾</button>
+                <div class="dropdown-panel">
+                    <a href="index.html">Startsida</a>
+                    <a href="tjanster.html">Tjänster</a>
+                    <a href="program.html">Program</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="bli-medlem.html">Bli medlem</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Mina tjänster</h1>
-        <p>Personlig träning anpassad efter dina mål och behov.</p>
-        <ul>
-            <li>Personlig träning 1:1</li>
-            <li>Personaliserade träningsprogram</li>
-            <li>Kostråd och ernäringssamtals</li>
-            <li>Motivering och coachning</li>
-        </ul>
-        <a href="bli-medlem.html" class="btn">Boka träning</a>
+    <main class="page-content">
+        <section class="page-card">
+            <h1>Mina tjänster</h1>
+            <p>Personlig träning anpassad efter dina mål och behov.</p>
+            <ul>
+                <li>Personlig träning 1:1</li>
+                <li>Personliga träningsprogram</li>
+                <li>Kostråd och ernäringssamtal</li>
+                <li>Motivation och coachning</li>
+            </ul>
+            <a href="bli-medlem.html" class="btn btn-primary">Boka träning</a>
+        </section>
     </main>
 
     <footer>

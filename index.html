@@ -10,21 +10,42 @@
 
 <body>
     <header>
-        <nav class="global-menu">
-            <ul>
-                <li><a href="index.html" class="active">Startsida</a></li>
-                <li><a href="tjanster.html">Tjänster</a></li>
-                <li><a href="program.html">Program</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="bli-medlem.html">Bli medlem</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <a href="index.html" class="brand">Hamodi PT</a>
+            <nav class="global-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Startsida</a></li>
+                    <li><a href="tjanster.html">Tjänster</a></li>
+                    <li><a href="program.html">Program</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="bli-medlem.html">Bli medlem</a></li>
+                </ul>
+            </nav>
+            <div class="menu-dropdown">
+                <button class="menu-toggle" aria-haspopup="true" aria-expanded="false">Alla sidor ▾</button>
+                <div class="dropdown-panel">
+                    <a href="index.html">Startsida</a>
+                    <a href="tjanster.html">Tjänster</a>
+                    <a href="program.html">Program</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="bli-medlem.html">Bli medlem</a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
-        <h1>Unna dig en personlig tränare</h1>
-        <p>Få ut det bästa av din träning med någon av våra personliga tränare. Oavsett om du är nybörjare eller mer erfaren kan jag hjälpa att hitta motivation och nå dina tränings mål.</p>
-        <a href="bli-medlem.html" class="btn">Börja träna</a>
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Premium personlig träning</span>
+                <h1>Unna dig en personlig tränare</h1>
+                <p>Få ut det bästa av din träning med någon av våra personliga tränare. Oavsett om du är nybörjare eller mer erfaren kan jag hjälpa dig att hitta motivation och nå dina träningsmål.</p>
+                <div class="hero-actions">
+                    <a href="bli-medlem.html" class="btn btn-primary">Börja träna</a>
+                    <a href="tjanster.html" class="btn btn-secondary">Se tjänster</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
