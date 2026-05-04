@@ -91,9 +91,6 @@ header {
   color: #7eb3ff;
 }
 
-.menu-dropdown {
-  display: none;
-}
 .hero {
   min-height: calc(100vh - 82px);
   display: grid;
