@@ -44,6 +44,21 @@
                             <input type="tel" id="phone" name="phone" placeholder="070-123 45 67" required />
                         </div>
                         <div class="form-group">
+                            <label for="age">Ålder</label>
+                            <input type="number" id="age" name="age" min="18" max="100" placeholder="25" />
+                        </div>
+                        <div class="form-group">
+                            <label>Kön</label>
+                            <div>
+                                <input type="radio" id="male" name="gender" value="male" />
+                                <label for="male">Man</label>
+                                <input type="radio" id="female" name="gender" value="female" />
+                                <label for="female">Kvinna</label>
+                                <input type="radio" id="other" name="gender" value="other" />
+                                <label for="other">Annat</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             <label for="service">Välj tjänst</label>
                             <select id="service" name="service" required>
                                 <option value="">Välj tjänst</option>
@@ -76,7 +91,26 @@
 
         form.addEventListener('submit', function (event) {
             event.preventDefault();
+            
+            // Enkel validering
             const name = document.getElementById('full-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const age = document.getElementById('age').value;
+            const service = document.getElementById('service').value;
+            
+            if (!name || !email || !phone || !service) {
+                result.style.display = 'block';
+                result.innerHTML = '<strong>Fel:</strong> Vänligen fyll i alla obligatoriska fält.';
+                return;
+            }
+            
+            if (age && age < 18) {
+                result.style.display = 'block';
+                result.innerHTML = '<strong>Fel:</strong> Du måste vara minst 18 år.';
+                return;
+            }
+            
             result.style.display = 'block';
             result.innerHTML = `<strong>Tack för din ansökan, ${name || 'du'}!</strong><br />Vi har tagit emot din information och kommer att titta på den inom kort.`;
             form.reset();
